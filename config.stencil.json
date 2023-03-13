@@ -3,13 +3,13 @@
     "brand": {},
     "category": {},
     "page": {
-      "contact.html":"/contact/",
-      "account.html":"/account/",
-      "checkout.html":"/checkout/",
-      "cart.html":"/cart/"
+      "contact.html": "/contact/",
+      "account.html": "/account/",
+      "checkout.html": "/checkout/",
+      "cart.html": "/cart/"
     },
     "product": {}
   },
   "normalStoreUrl": "https://raj-dev.mybigcommerce.com/",
-  "port": "5000"
+  "port": "8000"
 }

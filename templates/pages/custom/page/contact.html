@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +9,7 @@
     <!-- css  -->
     {{{stylesheet '/assets/css/customtheme.css'}}}
     {{{stylesheet '/assets/css/theme.css'}}}
+    <link href="assets/custom/css/font-awesome.css" rel="stylesheet">
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -177,7 +177,7 @@
             </div>
         </div>
         <!-- / header bottom  -->
-        {{>pages/custom/page/navigation-menu}}
+        {{>components/common/custom/navigation-menu}}
     </header>
     <!-- / header section -->
 
@@ -222,7 +222,7 @@
                         <!-- Contact address -->
                         <div class="aa-contact-address">
                           <!-- bigcommerce exiting form -->
-                            {{> pages/custom/page/contact-us-form}}
+                            {{>components/page/custom/contact-us-form}}
 
                             <!--<div class="row">
                                 <div class="col-md-8">
@@ -305,7 +305,7 @@
     <!-- footer -->
     <footer id="aa-footer">
         <!-- footer bottom -->
-        {{>pages/custom/page/footer}}
+        {{>components/common/custom/footer}}
     </footer>
     <!-- / footer -->
     

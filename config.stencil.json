@@ -7,6 +7,7 @@
       "account.html": "/account/",
       "checkout.html": "/checkout/",
       "cart.html": "/cart/"
+      
     },
     "product": {}
   },

@@ -51,13 +51,13 @@
 </head>
 
 <body>
-    
-    <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
+    <svg data-src="{{cdn 'img/icon-sprite.svg'}}" class="icons-svg-sprite"></svg>
 
-    {{> pages/custom/page/home}}
-    
-   
-    
+  
+    {{> components/common/body }}
+  
+
+    <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
     <script>
         { { !--Exported in app.js-- } }
         function onThemeBundleMain() {

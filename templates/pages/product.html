@@ -1,40 +1,94 @@
 ---
+carousel: {{theme_settings.homepage_show_carousel}}
+---
+---
 product:
-    videos:
-        limit: {{theme_settings.productpage_videos_count}}
-    reviews:
-        limit: {{theme_settings.productpage_reviews_count}}
-    related_products:
-        limit: {{theme_settings.productpage_related_products_count}}
-    similar_by_views:
-        limit: {{theme_settings.productpage_similar_by_views_count}}
+videos:
+limit: {{theme_settings.productpage_videos_count}}
+reviews:
+limit: {{theme_settings.productpage_reviews_count}}
+related_products:
+limit: {{theme_settings.productpage_related_products_count}}
+similar_by_views:
+limit: {{theme_settings.productpage_similar_by_views_count}}
 ---
 {{inject 'productId' product.id}}
 
-{{#partial "page"}}
+<!DOCTYPE html>
+<html lang="en">
+<body>
 
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-
-    {{#each product.shipping_messages}}
-        {{> components/common/alert/alert-info message}}
-    {{/each}}
-
-    <div>
-        {{> components/products/product-view}}
-
-        {{{region name="product_below_content"}}}
-
-        {{#if product.videos.list.length}}
-            {{> components/products/videos product.videos}}
-        {{/if}}
-
-        {{#all settings.show_product_reviews theme_settings.show_product_reviews (if theme_settings.show_product_details_tabs '!==' true)}}
-            {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
-        {{/all}}
-
-        {{> components/products/tabs}}
+    <!-- wpf loader Two -->
+    <div id="wpf-loader-two">
+        <div class="wpf-loader-two-inner">
+            <span>Loading</span>
+        </div>
     </div>
+    <!-- / wpf loader Two -->
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
+    <!-- END SCROLL TOP BUTTON -->
 
-    {{> components/products/schema}}
-{{/partial}}
-{{> layout/base}}
+
+    <!-- Start header section -->
+   
+        {{>components/common/custom/header}}
+   
+    <!-- / header section -->
+
+    <!-- menu -->
+    <section id="menu">
+        {{>components/common/custom/navigation-menu}}
+    </section>
+    <!-- / menu -->
+
+    <!-- Start slider -->
+    <section id="aa-slider">
+        <div class="aa-slider-area" style="margin-top: 50px;">
+            {{>components/common/custom/carousel}}
+        </div>
+    </section>
+    <!-- / slider -->
+
+    <!-- <section id="aa-catg-head-banner">
+    <img src="../../assets/custom/sliderimage/shoes2.jpg" alt="fashion img">
+   </section> -->
+
+    <section id="aa-product-details">
+        <div class="container">
+            {{#partial "page"}}
+
+            {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+            {{#each product.shipping_messages}}
+            {{> components/common/alert/alert-info message}}
+            {{/each}}
+            {{> components/products/product-view}}
+
+            {{{region name="product_below_content"}}}
+
+            {{#if product.videos.list.length}}
+            {{> components/products/videos product.videos}}
+            {{/if}}
+
+            {{#all settings.show_product_reviews theme_settings.show_product_reviews (if
+            theme_settings.show_product_details_tabs '!==' true)}}
+            {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+            {{/all}}
+
+            {{> components/products/tabs}}
+        </div>
+        {{> components/products/schema}}
+        {{/partial}}
+        {{> layout/productbase}}
+
+    </section>
+
+    <footer id="aa-footer">
+        <!-- footer bottom -->
+        {{>components/common/custom/footer}}
+    </footer>
+    <!-- / footer -->
+</body>
+
+</html>

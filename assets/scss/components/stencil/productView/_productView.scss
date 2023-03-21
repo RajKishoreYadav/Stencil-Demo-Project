@@ -340,6 +340,7 @@
         float: left;
         margin-bottom: 1rem;
         width: 100%;
+      
 
         @include breakpoint("small") {
             padding: 0 remCalc(10);
@@ -361,6 +362,7 @@
         .button {
             margin: 0;
             width: 100%;
+            background-color: #ff6666;
         }
     }
 

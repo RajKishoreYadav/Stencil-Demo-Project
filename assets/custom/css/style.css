@@ -1523,8 +1523,9 @@ img {
 #aa-testimonial .aa-testimonial-area .aa-testimonial-slider .slick-dots li {
   background: #fff none repeat scroll 0 0;
   cursor: pointer;
-  height: 6px;
+  /* height: 30px; */
   width: 20px;
+  
 }
 
 
@@ -1972,6 +1973,9 @@ img {
   float: left;
   padding: 10px 15px;
   width: 100%;
+  height:90px;
+  
+  
 }
 #aa-product-category .aa-product-catg-content .aa-product-catg-head .aa-product-catg-head-left {
   float: left;
@@ -2012,7 +2016,7 @@ img {
   display: inline-block;
   font-size: 20px;
   margin-left: 5px;
-  margin-top: 3px;
+  margin-top: 20px;
   padding: 0;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;

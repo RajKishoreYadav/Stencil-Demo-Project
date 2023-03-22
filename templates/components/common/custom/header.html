@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,11 +72,36 @@
             <!-- / header top left -->
             <div class="aa-header-top-right">
               <ul class="aa-head-top-nav-right">
-                <li><a href="account.html">My Account</a></li>
+                <li>
+                  <!-- <a href="account.html">My Account</a> -->
+                  <a class="navUser-action"
+                   href="{{urls.account.index}}"
+                   aria-label="{{lang 'common.account'}}"
+                   >
+                    {{lang 'common.account'}}
+                  </a>
+                </li>
                 <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>
                 <li class="hidden-xs"><a href="cart.html">My Cart</a></li>
                 <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
-                <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                <li>
+                  <!-- <a href="" data-toggle="modal" data-target="#login-modal">Login</a> -->
+                  <a class="navUser-action"
+                   href="{{urls.auth.login}}"
+                   aria-label="{{lang 'common.login'}}"
+                    >
+                    {{lang 'common.login'}}
+                  </a>
+                </li>
+                <li>
+                  <a class="navUser-action"
+                       href="{{urls.auth.create_account}}"
+                       aria-label="{{lang 'common.sign_up'}}"
+                    >
+                        {{lang 'common.sign_up'}}
+                    </a>
+                </li>
+                
               </ul>
             </div>
           </div>

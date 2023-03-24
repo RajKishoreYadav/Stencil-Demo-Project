@@ -1,9 +1,12 @@
-{{>components/common/custom/header}}
-{{>components/common/custom/navigation-menu}}
+
 {{inject 'passwordRequirements' settings.password_requirements}}
 {{inject 'recaptchaTitle' (lang 'create_account.recaptcha_title')}}
+
+{{>components/common/custom/header}}
+{{>components/common/custom/navigation-menu}}
+
 {{#partial "page"}}
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
     <h1 class="page-heading">{{lang 'create_account.heading' }}</h1>
 
     <div class="account account--fixed">

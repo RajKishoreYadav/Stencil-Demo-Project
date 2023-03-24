@@ -1,8 +1,11 @@
+
+{{>components/common/custom/header}}
+{{>components/common/custom/navigation-menu}}
 {{#partial "page"}}
 <div class="account" data-pagination-wishlist>
 
     {{#if wishlist.is_editable}}
-        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+        <!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
     {{/if}}
     <h2 class="page-heading">{{lang 'account.wishlists.view_heading' name=wishlist.name}}</h2>
     {{#if wishlist.is_editable}}
@@ -28,4 +31,4 @@
 
 </div>
 {{/partial}}
-{{> layout/base}}
+{{> layout/productbase}}

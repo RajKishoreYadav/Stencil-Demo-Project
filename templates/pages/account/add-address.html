@@ -1,6 +1,9 @@
+{{>components/common/custom/header}}
+{{>components/common/custom/navigation-menu}}
+
 {{#partial "page"}}
 
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
 
     {{#if forms.address.address_id}}
         <h2 class="page-heading">{{lang 'forms.address.edit.heading'}}</h2>
@@ -41,4 +44,4 @@
     </div>
 
 {{/partial}}
-{{> layout/base}}
+{{> layout/productbase}}

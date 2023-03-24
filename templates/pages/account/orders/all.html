@@ -3,10 +3,12 @@ customer:
     orders:
         limit: 10
 ---
+{{>components/common/custom/header}}
+{{>components/common/custom/navigation-menu}}
 
 {{#partial "page"}}
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
 <h1 class="page-heading">{{lang 'account.orders.heading' }}</h1>
 {{> components/account/navigation account_page='orders'}}
 
@@ -31,4 +33,6 @@ customer:
 </div>
 
 {{/partial}}
-{{> layout/base}}
+
+{{> layout/productbase}}
+

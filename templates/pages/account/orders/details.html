@@ -1,7 +1,10 @@
 {{#partial "page"}}
 {{inject 'selectItem' (lang 'forms.validate.account.reorder.select_item')}}
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{>components/common/custom/header}}
+{{>components/common/custom/navigation-menu}}
+
+<!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
 <h2 class="page-heading title">{{lang 'account.orders.details.heading' number=order.id}}</h2>
 {{> components/account/navigation account_page='orders'}}
 
@@ -182,4 +185,4 @@
     </div>
 </div>
 {{/partial}}
-{{> layout/base}}
+{{> layout/productbase}}

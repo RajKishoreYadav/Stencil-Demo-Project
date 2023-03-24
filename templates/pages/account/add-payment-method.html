@@ -1,3 +1,5 @@
+{{>components/common/custom/header}}
+{{>components/common/custom/navigation-menu}}
 {{#partial "page"}}
 
     {{inject 'creditCardNumber' (lang 'forms.validate.payment_method.credit_card_number')}}
@@ -24,7 +26,7 @@
     {{inject 'shopperId' customer.id}}
     {{inject 'countries' countries}}
 
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
 
     <h2 class="page-heading">{{lang 'forms.payment_methods.add.heading'}}</h2>
 
@@ -118,4 +120,4 @@
     </div>
 
 {{/partial}}
-{{> layout/base}}
+{{> layout/productbase}}

@@ -3,11 +3,7 @@
     "brand": {},
     "category": {},
     "page": {
-      "contact.html": "/contact/",
-      "account.html": "/account/",
-      "checkout.html": "/checkout/",
-      "cart.html": "/cart/"
-      
+      "contact.html": "/contact/"
     },
     "product": {}
   },

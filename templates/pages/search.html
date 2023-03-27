@@ -2,6 +2,10 @@
 product_results:
     limit: {{theme_settings.searchpage_products_per_page}}
 ---
+
+{{>components/common/custom/header}}
+{{>components/common/custom/navigation-menu}}
+
 {{inject 'categoryTree' forms.search.category_options}}
 {{inject 'searchProductsPerPage' theme_settings.searchpage_products_per_page}}
 {{inject 'searchResultsCount' (lang 'search.results.count' count=result_count search_query=(sanitize forms.search.query))}}
@@ -140,4 +144,4 @@ product_results:
 </section>
 
 {{/partial}}
-{{> layout/base}}
+{{> layout/productbase}}

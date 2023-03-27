@@ -3,6 +3,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
 ---
 <!DOCTYPE html>
 <html lang="en">
+
 <body>
     <!-- wpf loader Two -->
     <div id="wpf-loader-two">
@@ -16,29 +17,29 @@ carousel: {{theme_settings.homepage_show_carousel}}
     <!-- END SCROLL TOP BUTTON -->
 
 
- <!-- Start header section -->
- 
-    {{>components/common/custom/header}} 
-  
-  <!-- / header section -->
+    <!-- Start header section -->
 
-  <!-- menu -->
-  <section id="menu">
-    {{>components/common/custom/navigation-menu}}
-  </section>
-  <!-- / menu -->  
+    {{>components/common/custom/header}}
 
-   
-   <!-- Start slider -->
-    <section id="aa-slider">
-    <div class="aa-slider-area" style="margin-top: 50px;">
-      {{>components/common/custom/carousel}}
-    </div>
+    <!-- / header section -->
+
+    <!-- menu -->
+    <section id="menu">
+        {{>components/common/custom/navigation-menu}}
     </section>
-  <!-- / slider -->
+    <!-- / menu -->
+
+
+    <!-- Start slider -->
+    <section id="aa-slider">
+        <div class="aa-slider-area" style="margin-top: 50px;">
+            {{>components/common/custom/carousel}}
+        </div>
+    </section>
+    <!-- / slider -->
 
     <!-- start contact section -->
-    <section id="aa-contact" >
+    <section id="aa-contact">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -54,25 +55,31 @@ carousel: {{theme_settings.homepage_show_carousel}}
                                 width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                         <br><br>
-                        <!-- <div>
-                            <h1 style="background-color:white;text-align: center;">Contact Form</h1>
-                        </div> -->
+
                         <!-- Contact address -->
                         <div class="aa-contact-address">
-                          <!-- bigcommerce exiting form -->
-                            <!-- {{>components/page/custom/contact-us-form}} -->
-                            
+                            {{#if page.sub_pages}}
+                            <nav class="navBar navBar--sub">
+                                <ul class="navBar-section account-navigation">
+                                    {{#each page.sub_pages}}
+                                    <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                                    {{/each}}
+                                </ul>
+                            </nav>
+                            {{/if}}
+
                             <div id="contact-us-page" class="page-content page-content--centered">
                                 {{#if forms.contact.success}}
-                                    <div id="contact-us-success">{{{lang 'forms.contact_us.successful' shopPath=urls.home}}}</div>
+                                <div id="contact-us-success">{{{lang 'forms.contact_us.successful' shopPath=urls.home}}}
+                                </div>
                                 {{else}}
-                                    <p>{{{page.content}}}</p>
-                                    {{> components/page/contact-us-form}}
+                                <p>{{{page.content}}}</p>
+                                {{> components/page/contact-us-form}}
                                 {{/if}}
-                        
+
                             </div>
                             <!-- class="col-md-4" -->
-                            <div  style="text-align: center;">
+                            <div style="text-align: center;">
                                 <div class="aa-contact-address-right">
                                     <address>
                                         <h4>DailyShop</h4>
@@ -92,7 +99,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
         </div>
     </section>
 
-    
+
 
     <!-- footer -->
     <footer id="aa-footer">
@@ -100,7 +107,7 @@ carousel: {{theme_settings.homepage_show_carousel}}
         {{>components/common/custom/footer}}
     </footer>
     <!-- / footer -->
-    
+
 
     <!-- Login Modal -->
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"

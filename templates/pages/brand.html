@@ -3,6 +3,9 @@ brand:
     products:
         limit: {{theme_settings.brandpage_products_per_page}}
 ---
+{{>components/common/custom/header}}
+{{>components/common/custom/navigation-menu}}
+
 {{inject "brandProductsPerPage" theme_settings.brandpage_products_per_page}}
 {{#partial "head"}}
     {{#if pagination.brand.previous}}
@@ -46,4 +49,4 @@ brand:
 </div>
 
 {{/partial}}
-{{> layout/base}}
+{{> layout/productbase}}

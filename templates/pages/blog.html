@@ -5,6 +5,10 @@ blog:
         pages: 3
         summary: 200
 ---
+
+{{>components/common/custom/header}}
+{{>components/common/custom/navigation-menu}}
+
 {{#partial "head"}}
     {{#if pagination.blog.previous}}
         <link rel="prev" href="{{pagination.blog.previous}}">
@@ -31,4 +35,4 @@ blog:
 </section>
 
 {{/partial}}
-{{> layout/base}}
+{{> layout/productbase}}
